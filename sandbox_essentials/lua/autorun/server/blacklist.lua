@@ -40,7 +40,7 @@ hook.Add("PlayerSpawnNPC", "DisallowNPCSpawn", function(ply, npcType, weapon)
     -- Check if the NPC being spawned is in the disallowed list
     if table.HasValue(disallowedNPCs, npcType) then
         -- Inform the player that they cannot spawn this NPC
-        ply:PrintMessage(HUD_PRINTTALK, "[DarkRedux] You are not allowed to spawn this NPC.")
+        ply:PrintMessage(HUD_PRINTTALK, "[SBoxEssentials] You are not allowed to spawn this NPC.")
         -- Return false to prevent the NPC from spawning
         return false
     end
@@ -50,7 +50,7 @@ hook.Add("PlayerSpawnSENT", "DisallowEntitySpawn", function(ply, class)
     -- Check if the entity being spawned is in the disallowed list
     if table.HasValue(disallowedEntities, class) then
         -- Inform the player that they cannot spawn this entity
-        ply:PrintMessage(HUD_PRINTTALK, "[DarkRedux] You are not allowed to spawn this entity.")
+        ply:PrintMessage(HUD_PRINTTALK, "[SBoxEssentials] You are not allowed to spawn this entity.")
         -- Return false to prevent the entity from spawning
         return false
     end
